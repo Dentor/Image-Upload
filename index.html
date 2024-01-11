@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CGSpark Image Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/all.js" nonce="PbROUyoU"></script>
+    <script src="canvas2image.js"></script>
+    <script src="html2canvas.js"></script>
+    <script src="imageUpload.js"></script>
+
+
+    <meta property="og:title" content="your_link_title">
+    <meta property="og:image" content="your_image_url">
+</head>
+<body>
+
+    <div class="warp">
+        <div class="header">
+            <div class="logo">
+                <a href="#">CGSpark</a>
+            </div>
+            <div class="page-title">
+                <h1>Image Generator</h1>
+            </div>
+        </div>
+        <div class="main">
+            <div class="image-wrap">
+                <form class="image-form" runat="server">
+                    <div class="cta" id="cta-trigger">Upload an Image</div>
+                    <input class="hide-cta" accept="image/*" type='file' id="imgInp" value="" />
+                    <div id="drop-area" ondrop="drop(event)"
+                         ondragover="allowDrop(event)">
+                        <img id="emptyImage" src="images/empty-image.png" alt="your image" />
+                    </div>
+                </form>
+                <div class="user-pannel">
+                    <div id="download-cta" class="download cta">Download</div>
+                    <div id="facebookShare" class="facebook">&nbsp;</div>
+                    <div class="twiitter">&nbsp;</div>
+                </div>
+            </div>
+            <div class="stickers-wrap">
+                <h2 class="sticker-title">Please select sticker</h2>
+                <div id="sticker-album" class="stickers-box-wrap">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="facebook-share" class="fb-share-button" data-href="https://yuval.cgspark.co/imageUpload/" data-layout="button_count" data-size="small" >
+     <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fyuval.cgspark.co%2FimageUpload%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
+    </div>
+    <div id="hiddenCanvas">
+        <a id="download-image" href='' download>Download image</a>
+    </div>
+
+</body>
+</html>
+
+
+

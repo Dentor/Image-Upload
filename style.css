@@ -1,0 +1,190 @@
+/*Full screen view*/
+html {
+    height: 100%;
+    margin: 0px;
+}
+
+body * {
+    padding: 0px;
+    margin: 0px;
+    text-align: left;
+    font-style: normal;
+    font-family: Rubik;
+    box-sizing: border-box;
+    color: #85ddf1;
+}
+
+body {
+    min-height: 100%;
+    background-color: #0B1026;
+    padding: 0px;
+    margin: 0px;
+}
+
+.warp {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+.logo > a {
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 2s ease;
+    color: #85ddf1;
+}
+
+.page-title {
+    margin: 0 auto;
+    font-size: 22px;
+    padding-bottom: 20px;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    border-radius: 10px;
+    border: 5px solid #23263a;
+    width: 100%;
+    background-color: #0B1026;
+    padding: 20px;
+}
+
+
+.image-wrap {
+    width: 100%;
+}
+
+#drop-area {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    text-align: center;
+}
+
+.image-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.cta {
+    line-height: 45px;
+    background-color: #23263a;
+    border-radius: 5px;
+    padding: 0px 20px;
+    cursor: pointer;
+}
+
+.cta:hover {
+    color: #23263a;
+    background: #85ddf1;
+}
+
+input#imgInp {
+    width: 0px;
+}
+
+#emptyImage {
+    height: auto;
+    max-height: 400px;
+}
+
+
+.user-pannel {
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 310px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+
+.facebook {
+    background-image: url(images/facebook.svg);
+    background-size: 100%;
+    width: 45px;
+    height: 45px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor:pointer;
+}
+
+.twiitter {
+    background-image: url(images/twitter.svg);
+    background-size: 100%;
+    width: 45px;
+    height: 45px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.twiitter:hover, .facebook:hover {
+    filter: brightness(1) sepia(1) hue-rotate( 200deg) saturate(12);
+}
+
+
+
+.stickers-wrap {
+    width: 250px;
+}
+
+h2.sticker-title {
+    padding-left: 0px;
+    text-align: center;
+}
+
+#sticker-album {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+    height: 600px;
+    overflow: auto;
+}
+
+.sticker-box {
+    width: 120px;
+    height: 120px;
+    text-align: center;
+}
+
+.sticker-box:hover {
+    cursor: pointer;
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0px 0px 0px 2px #23263A;
+    box-shadow: inset 0px 0px 0px 2px #23263A;
+}
+
+.sticker-box img {
+    position: inherit!important;
+}
+
+
+div#hiddenCanvas {
+    position: absolute;
+    visibility: hidden;
+    top: 0;
+}
